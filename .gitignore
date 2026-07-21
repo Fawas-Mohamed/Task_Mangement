@@ -1,0 +1,80 @@
+# Editor and workspace settings
+.vscode/
+.vscode-shared/
+.copilot/
+.cursor/
+.cagent/
+
+# Operating system and shell files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Windows user profile noise
+AppData/
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.coverage
+htmlcov/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.turbo/
+*.tsbuildinfo
+
+# Package managers and local config
+.npm/
+.pnpm-store/
+.yarn/
+.env
+.env.*
+!.env.example
+
+# Misc project output
+.cache/
+.gradle/
+.m2/
+.expo/
+.android/
+.docker/
+.gitconfig
+.lesshst
+.node_repl_history
+.pdfbox.cache
+.emulator_console_auth_token
+*.mdf
+*_log.ldf
+
+# Existing local project dependencies that should not be committed
+client/node_modules/
+my-soc-ops-python/.venv/
