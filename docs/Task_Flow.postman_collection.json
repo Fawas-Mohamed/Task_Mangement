@@ -1,0 +1,322 @@
+{
+  "info": {
+    "_postman_id": "a6835a8b-2bb0-4ba1-81c7-aac25bb0a427",
+    "name": "Task_Flow",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51711110",
+    "_collection_link": "https://go.postman.co/collection/51711110-a6835a8b-2bb0-4ba1-81c7-aac25bb0a427?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI1NDk5LCJleHAiOjE3ODQ4MjYzOTl9.JMJqwa1kUbkdqwaZp1LOGpxUwlMjLkbPtPYgwlIvyUU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\":\"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/auth/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Task",
+      "item": [
+        {
+          "name": "Get Task",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI1NDk5LCJleHAiOjE3ODQ4MjYzOTl9.JMJqwa1kUbkdqwaZp1LOGpxUwlMjLkbPtPYgwlIvyUU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\":\"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/tasks?page=1&limit=10&sortBy=newest",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "newest"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Task{id}",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI1NDk5LCJleHAiOjE3ODQ4MjYzOTl9.JMJqwa1kUbkdqwaZp1LOGpxUwlMjLkbPtPYgwlIvyUU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\":\"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/tasks/f20bf584-9f2d-4a2d-a2a5-59e3adbdcaa5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "tasks",
+                "f20bf584-9f2d-4a2d-a2a5-59e3adbdcaa5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI1NDk5LCJleHAiOjE3ODQ4MjYzOTl9.JMJqwa1kUbkdqwaZp1LOGpxUwlMjLkbPtPYgwlIvyUU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Write onboarding guide\",\r\n    \"description\":\"Draft the internal onboarding doc6\",\r\n    \"status\":\"PENDING\",\r\n    \"priority\":\"MEDIUM\",\r\n    \"dueDate\":\"2026-08-15\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/tasks/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "tasks",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI2NDU2LCJleHAiOjE3ODQ4MjczNTZ9.eE_etSAqkxXZoUN_l3GiCdIyr4ghNm2wN0e3kvpqeG0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"IN_PROGRESS\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/tasks/f20bf584-9f2d-4a2d-a2a5-59e3adbdcaa5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "tasks",
+                "f20bf584-9f2d-4a2d-a2a5-59e3adbdcaa5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI2NDU2LCJleHAiOjE3ODQ4MjczNTZ9.eE_etSAqkxXZoUN_l3GiCdIyr4ghNm2wN0e3kvpqeG0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"IN_PROGRESS\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/tasks/f20bf584-9f2d-4a2d-a2a5-59e3adbdcaa5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "tasks",
+                "f20bf584-9f2d-4a2d-a2a5-59e3adbdcaa5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dashboard Stats",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODU0N2FhYi0wMjI4LTQ4NmUtYWUyOC03MDRlODFmYjU0YjgiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNzg0ODI2NDU2LCJleHAiOjE3ODQ4MjczNTZ9.eE_etSAqkxXZoUN_l3GiCdIyr4ghNm2wN0e3kvpqeG0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/api/tasks/dashboard/stats",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "tasks",
+                "dashboard",
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
